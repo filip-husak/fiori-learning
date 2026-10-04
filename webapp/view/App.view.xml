@@ -1,0 +1,6 @@
+<!-- Všechny xml elementy ve view složce -->
+<mvc:View
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Text text="Ahoj světe!"/>
+</mvc:View>
