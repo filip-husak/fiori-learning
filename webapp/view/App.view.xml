@@ -1,6 +1,10 @@
 <!-- Všechny xml elementy ve view složce -->
+
 <mvc:View
+   controllerName="ui5.tutorial.walkthrough.controller.App"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
-   <Text text="Ahoj světe!"/>
+   <Button
+      text="Say Hello"
+      press=".onShowHello"/>
 </mvc:View>
