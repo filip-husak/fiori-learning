@@ -14,9 +14,9 @@ Osobní repozitář, ve kterém se učím **SAP Fiori** a **SAPUI5**. Prochází
 - [x] Bootstrap
 - [x] Controls
 - [x] XML Views
-- [ ] **Controllers** ← právě tady
-- [ ] Modules
-- [ ] JSON Model
+- [x] Controllers
+- [x] Modules
+- [ ] **JSON Model** ← další krok
 - [ ] Translatable Texts (i18n)
 - [ ] Component Configuration a Descriptor (`manifest.json`)
 - [ ] Pages, Panels a Shell
@@ -31,22 +31,41 @@ Osobní repozitář, ve kterém se učím **SAP Fiori** a **SAPUI5**. Prochází
 ## Co už umím
 
 - **Bootstrap:** UI5 se načítá přes `sap-ui-core.js` a konfiguruje se atributy `data-sap-ui-*` (téma, asynchronní načítání, resource roots).
+- **Controls:** vytvořit ovládací prvek (`sap.m.Text`) a umístit ho do těla stránky.
+- **XML Views:** UI je oddělené do samostatného souboru `App.view.xml`. Výchozí XML namespace je `sap.m`, ostatní mají alias z poslední části názvu (např. `mvc` pro `sap.ui.core.mvc`).
+- **Controllers:** view se s controllerem propojí přes `controllerName`, událost tlačítka se obslouží pomocí `press=".onShowHello"`. Controller je v TypeScriptu třída, která rozšiřuje `sap/ui/core/mvc/Controller`.
+- **Modules:** moduly UI5 se importují (`import MessageToast from "sap/m/MessageToast"`) a místo nativního `alert` se používá `MessageToast.show(...)`.
+- **Konvence:** pojmenování controllerů a views mám sepsané v [Conventions_notes.md](Conventions_notes.md).
 - Aplikaci spustit lokálně i v GitHub Codespaces.
 
-## Na čem právě pracuji: Controllers
+## MVC v kostce
 
-- propojení view a controlleru (`controllerName`)
-- event handlery ve view (`press=".onShowHello"`) a jejich implementace v TypeScriptu
-- základní práce s `sap.m.MessageToast`
+- **Model** spravuje data aplikace.
+- **View** definuje a vykresluje UI (XML view).
+- **Controller** reaguje na události z view a uživatelské akce a podle nich upravuje view a model.
+
+Model zatím nemám, přijde v dalším kroku.
+
+## Na čem budu pracovat dál: JSON Model
+
+- první "M" v MVC: vytvořit JSON model a připojit ho k view
+- navázat vstupní pole na model (data binding)
+- zobrazit zadanou hodnotu po stisku tlačítka
 
 ## Struktura repozitáře
 
 ```
 fiori-learning/
-├── webapp/          # zdrojový kód aplikace (views, controllery, index)
-├── package.json     # závislosti a skript pro spuštění
-├── tsconfig.json    # konfigurace TypeScriptu
-├── ui5.yaml         # konfigurace UI5 tooling
+├── webapp/
+│   ├── controller/       # controllery (App.controller.ts)
+│   ├── view/             # XML views (App.view.xml)
+│   ├── index.html        # bootstrap UI5
+│   ├── index.ts          # vytvoření view a umístění do stránky
+│   └── manifest.json
+├── Conventions_notes.md  # poznámky ke konvencím pojmenování
+├── package.json          # závislosti a skript pro spuštění
+├── tsconfig.json         # konfigurace TypeScriptu
+├── ui5.yaml              # konfigurace UI5 tooling
 └── README.md
 ```
 
