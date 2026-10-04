@@ -5,6 +5,6 @@
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
    <Button
-      text="Say Hello"
+      text="Řekni ahoj"
       press=".onShowHello"/>
 </mvc:View>
