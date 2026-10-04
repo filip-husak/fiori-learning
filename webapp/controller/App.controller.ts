@@ -1,3 +1,4 @@
+import MessageToast from "sap/m/MessageToast";
 import Controller from "sap/ui/core/mvc/Controller";
 
 / This shows naming convention for controllers - IDEs, JSDoc. /
@@ -7,6 +8,6 @@ import Controller from "sap/ui/core/mvc/Controller";
 export default class AppController extends Controller {
 	onShowHello(): void {
 		// show a native JavaScript alert
-		alert("Ahoj světe!");
+		MessageToast.show("Ahoj světe!");
 	 }
 };
