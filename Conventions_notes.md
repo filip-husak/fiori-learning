@@ -23,3 +23,16 @@
 - As a general rule, the default XML namespace is sap.m
 
 - Other XML namespaces use the last part of the SAP namespace as alias (for example, mvc for sap.ui.core.mvc)
+
+**Internationalization - i18n**
+- The resource model for internationalization is called the i18n model.
+
+- The base filename is i18n.properties.
+
+- Resource bundle keys are written in (lower) camelCase.
+
+- Resource bundle values can contain placeholders like {0}, {1}, {2}, …
+
+- Never concatenate strings that are translated, always use placeholders.
+
+- Use Unicode escape sequences for special characters.
