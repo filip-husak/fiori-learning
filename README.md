@@ -17,9 +17,9 @@ Osobní repozitář, ve kterém se učím **SAP Fiori** a **SAPUI5**. Prochází
 - [x] XML Views
 - [x] Controllers
 - [x] Modules
-- [x] **JSON Model**
+- [x] JSON Model
 - [x] Translatable Texts (i18n)
-- [ ] **Component Configuration a Descriptor** (`manifest.json` – zatím obsahuje pouze základní `sap.app`)
+- [ ] Component Configuration a Descriptor (`manifest.json` – zatím obsahuje pouze základní `sap.app`)
 - [x] Component (`Component.ts`), komponentové modely a asynchronní načítání
 - [ ] Pages, Panels a Shell
 - [ ] Dialogs a Fragments
