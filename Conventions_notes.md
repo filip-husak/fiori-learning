@@ -36,3 +36,10 @@
 - Never concatenate strings that are translated, always use placeholders.
 
 - Use Unicode escape sequences for special characters.
+
+**Conventions**
+- The manifest file is named manifest and stored as a JSON file.
+
+- The manifest file is located in the webapp folder.
+
+- Use translatable texts for the title and the description of the app.
