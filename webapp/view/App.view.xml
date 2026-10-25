@@ -5,7 +5,7 @@
   xmlns:mvc="sap.ui.core.mvc"
   displayBlock="true">
  <Shell>
-  <App>
+  <App class="myAppDemoWT">
    <pages>
     <Page title="{i18n>homePageTitle}">
       <content>
@@ -22,9 +22,9 @@
             value="{/recipient/name}"
             valueLiveUpdate="true"
             width="60%"/>
-          <Text 
-            text="Ahoj {/recipient/name}"
-            class="sapUiSmallMargin"/>
+          <FormattedText 
+            htmlText="Ahoj {/recipient/name}"
+            class="sapUiSmallMargin sapThemeHighLight-asColor myCustomText"/>
           </content>
         </Panel>
       </content>
