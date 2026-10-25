@@ -37,7 +37,7 @@
 
 - Use Unicode escape sequences for special characters.
 
-**Conventions**
+**UI5 Manifest**
 - The manifest file is named manifest and stored as a JSON file.
 
 - The manifest file is located in the webapp folder.
