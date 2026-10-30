@@ -1,6 +1,6 @@
 <mvc:View
   xmlns="sap.m"
-  xlmns:core="sap.ui.core"
+  xmlns:core="sap.ui.core"
   xmlns:mvc="sap.ui.core.mvc">
   <List
     headerText="{i18n>invoiceListTitle}"
